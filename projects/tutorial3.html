@@ -3,9 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Project 3 | Japhet Balondo</title>
+    <title>Photo Gallery | Japhet Balondo</title>
     <link rel="stylesheet" href="../css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        
+    </style>
 </head>
 <body>
     <header>
@@ -28,11 +31,11 @@
     <main class="project-detail">
         <section class="project-header">
             <div class="container">
-                <h1>Project 3</h1>
-                <p class="project-subtitle">Coming soon...</p>
+                <h1>Photo Gallery</h1>
+                <p class="project-subtitle">A4 Format Portfolio</p>
                 <div class="project-meta">
-                    <span><i class="fas fa-calendar-alt"></i> Coming soon</span>
-                    <span><i class="fas fa-tags"></i> Project, Development</span>
+                    <span><i class="fas fa-calendar-alt"></i> Updated June 2025</span>
+                    <span><i class="fas fa-tags"></i> Photography, Print Design</span>
                 </div>
             </div>
         </section>
@@ -40,13 +43,59 @@
         <section class="project-content">
             <div class="container">
                 <div class="project-description">
-                    <h2>About This Project</h2>
-                    <p>This project is currently in development. Check back soon for updates!</p>
-                    <p>In the meantime, you can view my other projects or get in touch with me through the contact page.</p>
+                    <h2>Portfolio Collection</h2>
+                    <p>This is my personal projects I made using Adobe Softwares</p>
+                </div>
+
+                <!-- Gallery Section -->
+                <div class="gallery-container">
+                    <!-- Gallery Item 1 -->
+                    <div class="gallery-item">
+                        <a href="assests/Poster2forWEB.jpg" target="_blank">
+                            <img src="assests/Poster2forWEB.jpg" alt="Project work" class="gallery-img">
+                            <div class="img-caption">Nostalgia | Adobe Illustrator</div>
+                        </a>
+                    </div>
+                    
+                    <div class="gallery-item">
+                        <a href="assests/Poster2forWEB.jpg" target="_blank">
+                            <img src="assests/Poster2forWEB.jpg" alt="Project work" class="gallery-img">
+                            <div class="img-caption">Nostalgia | Adobe Illustrator</div>
+                        </a>
+                    </div>
+
+                    <div class="gallery-item">
+                        <a href="assests/Poster2forWEB.jpg" target="_blank">
+                            <img src="assests/Poster2forWEB.jpg" alt="Project work" class="gallery-img">
+                            <div class="img-caption">Nostalgia | Adobe Illustrator</div>
+                        </a>
+                    </div>
+
+                    <div class="gallery-item">
+                        <a href="assests/Poster2forWEB.jpg" target="_blank">
+                            <img src="assests/Poster2forWEB.jpg" alt="Project work" class="gallery-img">
+                            <div class="img-caption">Nostalgia | Adobe Illustrator</div>
+                        </a>
+                    </div>
+
+                    <div class="gallery-item">
+                        <a href="assests/Poster2forWEB.jpg" target="_blank">
+                            <img src="assests/Poster2forWEB.jpg" alt="Project work" class="gallery-img">
+                            <div class="img-caption">Nostalgia | Adobe Illustrator</div>
+                        </a>
+                    </div>
+
+                    <div class="gallery-item">
+                        <a href="assests/Poster2forWEB.jpg" target="_blank">
+                            <img src="assests/Poster2forWEB.jpg" alt="Project work" class="gallery-img">
+                            <div class="img-caption">Nostalgia | Adobe Illustrator</div>
+                        </a>
+                    </div>
                 </div>
 
                 <div class="project-actions">
                     <a href="../index.html#projects" class="btn"><i class="fas fa-arrow-left"></i> Back to Projects</a>
+                    <button onclick="window.print()" class="btn"><i class="fas fa-print"></i> Print Gallery</button>
                 </div>
             </div>
         </section>
@@ -57,7 +106,12 @@
             <p>&copy; 2025 Japhet Balondo. All rights reserved.</p>
         </div>
     </footer>
-
-    <script src="../js/script.js"></script>
+    <!-- Image Modal -->
+    <div id="imageModal" class="modal">
+        <span class="close">&times;</span>
+        <img class="modal-content" id="expandedImg">
+        <div id="imgCaption"></div>
+    </div>
+    <script src="script.js"></script>
 </body>
 </html>
