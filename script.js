@@ -1,3 +1,12 @@
+// Simple styled popup
+window.onload = function() {
+    if (confirm("This website is under development.\nSome features may not work properly.\n- Japhet Balondo\n\nClick OK to continue.")) {
+        // User clicked OK
+    } else {
+        // User clicked Cancel (you could redirect them if you want)
+    }
+};
+
 document.addEventListener('DOMContentLoaded', function() {
     // Mobile menu toggle
     const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
