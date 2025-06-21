@@ -37,27 +37,54 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
     
-    // Form submission
-    const contactForm = document.querySelector('.contact-form');
-    if (contactForm) {
-        contactForm.addEventListener('submit', function(e) {
-            e.preventDefault();
-            
-            // Get form values
-            const name = this.querySelector('input[type="text"]').value;
-            const email = this.querySelector('input[type="email"]').value;
-            const message = this.querySelector('textarea').value;
-            
-            // Here you would typically send the form data to a server
-            console.log('Form submitted:', { name, email, message });
-            
-            // Show success message
-            alert('Thank you for your message! I will get back to you soon.');
-            
-            // Reset form
-            this.reset();
+document.getElementById('contactForm').addEventListener('submit', function(e) {
+    e.preventDefault();
+    
+    const form = e.target;
+    const formData = new FormData(form);
+    const statusElement = document.getElementById('formStatus');
+    
+    // Show loading state
+    statusElement.style.display = 'block';
+    statusElement.textContent = 'Sending message...';
+    statusElement.style.color = 'var(--text)';
+    
+    // Using FormSubmit.co for easy email handling
+    fetch('https://formsubmit.co/ajax/balondojaphet@gmail.com', {
+        method: 'POST',
+        headers: { 
+            'Content-Type': 'application/json',
+            'Accept': 'application/json'
+        },
+        body: JSON.stringify({
+            name: formData.get('name'),
+            email: formData.get('email'),
+            subject: formData.get('subject'),
+            message: formData.get('message')
+        })
+    })
+    .then(response => response.json())
+    .then(data => {
+        statusElement.textContent = 'Message sent successfully!';
+        statusElement.style.color = 'var(--primary)';
+        form.reset();
+        
+        // Reset form labels
+        document.querySelectorAll('.form-group label').forEach(label => {
+            label.style.transform = '';
+            label.style.color = '';
         });
-    }
+    })
+    .catch(error => {
+        statusElement.textContent = 'Failed to send message. Please try again later or email me directly.';
+        statusElement.style.color = 'var(--accent)';
+    })
+    .finally(() => {
+        setTimeout(() => {
+            statusElement.style.display = 'none';
+        }, 5000);
+    });
+});
     
     // Add animation to elements when they come into view
     const animateOnScroll = function() {
