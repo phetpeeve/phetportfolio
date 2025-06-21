@@ -142,7 +142,49 @@
             </div>
         </section>
     </main>
+        <!-- Contact Section -->
+<section class="contact" id="contact">
+    <div class="container">
+        <h2>Get In Touch</h2>
+        <p>Have a project in mind or want to collaborate? Send me a message!</p>
+        
+        <form id="contactForm" class="contact-form">
+            <div class="form-group">
+                <input type="text" id="name" name="name" required>
+                <label for="name">Your Name</label>
+            </div>
+            
+            <div class="form-group">
+                <input type="email" id="email" name="email" required>
+                <label for="email">Your Email</label>
+            </div>
+            
+            <div class="form-group">
+                <input type="text" id="subject" name="subject" required>
+                <label for="subject">Subject</label>
+            </div>
+            
+            <div class="form-group">
+                <textarea id="message" name="message" rows="5" required></textarea>
+                <label for="message">Your Message</label>
+            </div>
+            
+            <button type="submit" class="btn">
+                <span>Send Message</span>
+                <svg viewBox="0 0 24 24" width="24" height="24">
+                    <path fill="currentColor" d="M2,21L23,12L2,3V10L17,12L2,14V21Z" />
+                </svg>
+            </button>
+            
+            <div id="formStatus"></div>
+        </form>
+    </div>
+</section>
 
+<!-- Alternative Contact Method -->
+<div class="direct-contact">
+    <p>Or email me directly at: <a href="mailto:balondojaphet@gmail.com">balondojaphet@gmail.com</a></p>
+</div>
     <footer>
         <div class="container">
             <p>&copy; 2025 Japhet Balondo. All rights reserved.</p>
