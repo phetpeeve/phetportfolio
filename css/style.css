@@ -982,3 +982,103 @@ code {
 .direct-contact a:hover::after {
     transform: scaleX(1);
 }
+
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.social-links a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    background: rgba(0, 255, 157, 0.05);
+    border: 1px solid rgba(0, 255, 157, 0.2);
+    transition: all 0.3s ease;
+}
+
+.social-links svg {
+    width: 24px;
+    height: 24px;
+    fill: var(--text-light);
+    transition: all 0.3s ease;
+}
+
+.social-links a:hover {
+    background: rgba(0, 255, 157, 0.1);
+    border-color: var(--primary);
+    transform: translateY(-3px);
+    box-shadow: 0 4px 15px rgba(0, 255, 157, 0.3);
+}
+
+.social-links a:hover svg {
+    fill: var(--primary);
+    filter: drop-shadow(0 0 5px rgba(0, 255, 157, 0.7));
+}
+
+/* Animation */
+@keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-5px); }
+}
+
+.social-links a:hover {
+    transform: scale(1.1);
+}
+
+/* Contact Methods Section */
+.contact-methods {
+    margin-top: 3rem;
+    padding-top: 2rem;
+    border-top: 1px solid rgba(0, 255, 157, 0.2);
+}
+
+.direct-email {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.75rem;
+    margin-bottom: 2rem;
+}
+
+.direct-email a {
+    color: var(--primary);
+    text-decoration: none;
+    font-size: 1.1rem;
+    position: relative;
+    transition: all 0.3s ease;
+}
+
+.direct-email a::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background: var(--primary);
+    transform: scaleX(0);
+    transition: transform 0.3s ease;
+}
+
+.direct-email a:hover {
+    text-shadow: 0 0 8px rgba(0, 255, 157, 0.5);
+}
+
+.direct-email a:hover::after {
+    transform: scaleX(1);
+}
+
+.direct-email svg {
+    width: 24px;
+    height: 24px;
+    transition: all 0.3s ease;
+}
+
+.direct-email:hover svg {
+    filter: drop-shadow(0 0 8px rgba(0, 255, 157, 0.7));
+}
