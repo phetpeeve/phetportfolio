@@ -1082,3 +1082,255 @@ code {
 .direct-email:hover svg {
     filter: drop-shadow(0 0 8px rgba(0, 255, 157, 0.7));
 }
+
+/* Video Portfolio Styles */
+.video-portfolio {
+    padding: 40px 0;
+    background-color: var(--dark);
+    color: var(--text);
+}
+
+.portfolio-header {
+    text-align: center;
+    padding: 40px 0;
+    background: linear-gradient(135deg, var(--dark) 0%, #001F15 100%);
+    border-bottom: 1px solid rgba(0, 255, 157, 0.2);
+}
+
+.portfolio-header h1 {
+    color: var(--primary);
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+}
+
+.portfolio-subtitle {
+    color: var(--text-light);
+    font-size: 1.2rem;
+    max-width: 700px;
+    margin: 0 auto 20px;
+}
+
+.portfolio-meta {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    color: var(--text-light);
+    font-size: 0.9rem;
+}
+
+.portfolio-meta i {
+    color: var(--primary);
+    margin-right: 5px;
+}
+
+/* ==================== */
+/* Video Gallery Layout */
+/* ==================== */
+.video-gallery {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 3rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem 1.5rem;
+}
+
+/* ================= */
+/* Video Card Styles */
+/* ================= */
+.video-card {
+    margin: 50px;
+  background: rgba(20, 20, 20, 0.95);
+  border-radius: 1rem;
+  overflow: hidden;
+  box-shadow: 0 0.5rem 1.5rem rgba(0, 0, 0, 0.3);
+  border: 1px solid rgba(0, 255, 157, 0.2);
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+.video-card:hover {
+  transform: translateY(-0.5rem);
+  box-shadow: 0 1rem 2rem rgba(0, 255, 157, 0.15);
+}
+
+/* ================== */
+/* Video Player Frame */
+/* ================== */
+.video-frame {
+  position: relative;
+  padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
+  background: #000;
+}
+
+.video-frame iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+/* ================ */
+/* Content Section */
+/* ================ */
+.video-content {
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.video-title {
+  color: var(--primary);
+  margin: 0;
+  font-size: 1.5rem;
+  line-height: 1.4;
+  font-weight: 600;
+}
+
+.video-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  font-size: 1rem;
+}
+
+.video-meta-item {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: var(--text-light);
+}
+
+.video-meta-item i {
+  color: var(--primary);
+  font-size: 1rem;
+}
+
+/* ================== */
+/* Production Credits */
+/* ================== */
+.production-team {
+  margin-top: 1.5rem;
+  background: rgba(0, 255, 157, 0.08);
+  padding: 1.5rem;
+  border-radius: 0.75rem;
+  border-left: 0.25rem solid var(--primary);
+}
+
+.team-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1.25rem;
+}
+
+.team-role {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.role-header {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.role-icon {
+  color: var(--primary);
+  font-size: 1.1rem;
+  min-width: 1.5rem;
+  text-align: center;
+}
+
+.role-title {
+  font-weight: 600;
+  color: var(--primary);
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05rem;
+}
+
+.team-members {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  padding-left: 2.25rem;
+}
+
+.team-member {
+  color: var(--text-light);
+  font-size: 0.95rem;
+  position: relative;
+  line-height: 1.5;
+}
+
+.team-member::before {
+  content: "•";
+  color: var(--primary);
+  position: absolute;
+  left: -1.25rem;
+}
+
+/* ============= */
+/* Action Button */
+/* ============= */
+.watch-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+  background-color: #ff0000;
+  color: white;
+  padding: 0.875rem 1.75rem;
+  border-radius: 0.5rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  margin-top: 1rem;
+  width: fit-content;
+}
+
+.watch-btn:hover {
+  background-color: #e60000;
+  transform: translateY(-0.125rem);
+  box-shadow: 0 0.5rem 1rem rgba(255, 0, 0, 0.2);
+}
+
+/* ==================== */
+/* Responsive Adjustments */
+/* ==================== */
+@media (min-width: 768px) {
+  .video-gallery {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2.5rem;
+    padding: 2.5rem;
+  }
+  
+  .video-content {
+    padding: 2rem;
+  }
+}
+
+@media (min-width: 1200px) {
+  .video-gallery {
+    max-width: 1400px;
+    gap: 3rem;
+    padding: 3rem;
+  }
+  
+  .production-team {
+    padding: 2rem;
+  }
+}
+
+/* ============= */
+/* Debug Helpers */
+/* ============= */
+/* Uncomment to see element boundaries
+.video-card { outline: 1px dashed red; }
+.video-content { outline: 1px dashed blue; }
+.production-team { outline: 1px dashed green; }
+*/
